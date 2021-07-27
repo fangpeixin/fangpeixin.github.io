@@ -255,17 +255,9 @@
       
         <p>第一种方法</p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> sort <span class="keyword">FROM</span> `atable` <span class="keyword">ORDER</span> <span class="keyword">BY</span> <span class="operator">-</span>sort <span class="keyword">DESC</span>;</span><br></pre></td></tr></table></figure>
-
-<p>&lt;！–more–&gt;</p>
-<p>第二种方法 Mysql有个官方文档里没有说出的语法，可以把null结果排到最后：把-号(负号)放到要排序的列名前，并把asc替换为desc</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> sort <span class="keyword">FROM</span> `t_grab_advert_sogou` <span class="keyword">ORDER</span> <span class="keyword">BY</span> ISNULL(sort),sort <span class="keyword">ASC</span></span><br></pre></td></tr></table></figure>
-
-<p>也可以直接写sort</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">JpaSort sort = JpaSort.unsafe(<span class="string">&quot;case when birth is null then 1 else 0 end&quot;</span>)</span><br><span class="line">                .andUnsafe(Direction.ASC, <span class="string">&quot;birth&quot;</span>);</span><br><span class="line">        Pageable pageable = PageRequest.of(<span class="number">0</span>, <span class="number">100</span>, sort);</span><br><span class="line">        Page&lt;User&gt; all = userRepository.findAll(pageable);</span><br><span class="line">        all.forEach(user -&gt; &#123;</span><br><span class="line">            System.out.println(user);</span><br><span class="line">        &#125;);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p>JpaSort.unsafe(“case when birth is null then 1 else 0 end”) 是把值 birth 字段值为null的放在最后；</p>
-<p>.andUnsafe(Direction.ASC, “birth”) 再按照birth字段升序排列，改成.andUnsafe(Direction.DESC, “birth”) 则是降序</p>
-
+        
+          <a class="article-more-a" href="/2021/07/27/MySQL%E6%8E%92%E5%BA%8F%E4%BD%BFnull%E7%BB%93%E6%9E%9C%E6%8E%92%E5%88%B0%E6%9C%80%E5%90%8E/#more">more >></a>
+        
       
 
       

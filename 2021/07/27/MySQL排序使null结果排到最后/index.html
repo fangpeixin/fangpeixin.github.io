@@ -24,15 +24,15 @@
     }
   </style>
 
-  <meta name="description" content="第一种方法 1SELECT sort FROM &#96;atable&#96; ORDER BY -sort DESC;  &lt;！–more–&gt; 第二种方法 Mysql有个官方文档里没有说出的语法，可以把null结果排到最后：把-号(负号)放到要排序的列名前，并把asc替换为desc 1SELECT sort FROM &#96;t_grab_advert_sogou&#96; ORDER BY ISNULL(sor">
+  <meta name="description" content="第一种方法 1SELECT sort FROM &#96;atable&#96; ORDER BY -sort DESC;">
 <meta property="og:type" content="article">
 <meta property="og:title" content="MySQL排序使null结果排到最后">
 <meta property="og:url" content="http://example.com/2021/07/27/MySQL%E6%8E%92%E5%BA%8F%E4%BD%BFnull%E7%BB%93%E6%9E%9C%E6%8E%92%E5%88%B0%E6%9C%80%E5%90%8E/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="第一种方法 1SELECT sort FROM &#96;atable&#96; ORDER BY -sort DESC;  &lt;！–more–&gt; 第二种方法 Mysql有个官方文档里没有说出的语法，可以把null结果排到最后：把-号(负号)放到要排序的列名前，并把asc替换为desc 1SELECT sort FROM &#96;t_grab_advert_sogou&#96; ORDER BY ISNULL(sor">
+<meta property="og:description" content="第一种方法 1SELECT sort FROM &#96;atable&#96; ORDER BY -sort DESC;">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2021-07-27T02:04:25.000Z">
-<meta property="article:modified_time" content="2021-07-27T02:05:16.402Z">
+<meta property="article:modified_time" content="2021-07-27T02:09:26.003Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
   
@@ -194,7 +194,8 @@
         <p>第一种方法</p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> sort <span class="keyword">FROM</span> `atable` <span class="keyword">ORDER</span> <span class="keyword">BY</span> <span class="operator">-</span>sort <span class="keyword">DESC</span>;</span><br></pre></td></tr></table></figure>
 
-<p>&lt;！–more–&gt;</p>
+<span id="more"></span>
+
 <p>第二种方法 Mysql有个官方文档里没有说出的语法，可以把null结果排到最后：把-号(负号)放到要排序的列名前，并把asc替换为desc</p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> sort <span class="keyword">FROM</span> `t_grab_advert_sogou` <span class="keyword">ORDER</span> <span class="keyword">BY</span> ISNULL(sort),sort <span class="keyword">ASC</span></span><br></pre></td></tr></table></figure>
 
