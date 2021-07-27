@@ -6,7 +6,7 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>MySQL判断字段是否空值 | Hexo</title>
+  <title>类似视图的子查询 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
   <link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
@@ -24,15 +24,15 @@
     }
   </style>
 
-  <meta name="description" content="MySQL判断字段是否空值？1SELECT * FROM cp_major where company_id &#x3D; 2 AND isnull(major_sort)  order by major_sort asc  1SELECT * FROM cp_major where company_id &#x3D; 49 order by major_sort &#x3D; NULL , major_sort asc;">
+  <meta name="description" content="12345678910111213141516171819202122@Entity@Table(name &#x3D; &quot;staff_request_dto&quot;)@Subselect(&quot;select \n&quot; +        &quot;c.cName as staff_name,\n&quot; +        &quot;d.cName as staff_nam">
 <meta property="og:type" content="article">
-<meta property="og:title" content="MySQL判断字段是否空值">
-<meta property="og:url" content="http://example.com/2021/07/26/MySQL%E5%88%A4%E6%96%AD%E5%AD%97%E6%AE%B5%E6%98%AF%E5%90%A6%E7%A9%BA%E5%80%BC/index.html">
+<meta property="og:title" content="类似视图的子查询">
+<meta property="og:url" content="http://example.com/2021/07/27/%E7%B1%BB%E4%BC%BC%E8%A7%86%E5%9B%BE%E7%9A%84%E5%AD%90%E6%9F%A5%E8%AF%A2/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="MySQL判断字段是否空值？1SELECT * FROM cp_major where company_id &#x3D; 2 AND isnull(major_sort)  order by major_sort asc  1SELECT * FROM cp_major where company_id &#x3D; 49 order by major_sort &#x3D; NULL , major_sort asc;">
+<meta property="og:description" content="12345678910111213141516171819202122@Entity@Table(name &#x3D; &quot;staff_request_dto&quot;)@Subselect(&quot;select \n&quot; +        &quot;c.cName as staff_name,\n&quot; +        &quot;d.cName as staff_nam">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2021-07-26T09:22:33.000Z">
-<meta property="article:modified_time" content="2021-07-26T09:24:06.770Z">
+<meta property="article:published_time" content="2021-07-27T02:05:52.000Z">
+<meta property="article:modified_time" content="2021-07-27T02:06:21.395Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
   
@@ -171,29 +171,27 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-MySQL判断字段是否空值" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-类似视图的子查询" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      MySQL判断字段是否空值
+      类似视图的子查询
     </h1>
   
 
         
-        <a href="/2021/07/26/MySQL%E5%88%A4%E6%96%AD%E5%AD%97%E6%AE%B5%E6%98%AF%E5%90%A6%E7%A9%BA%E5%80%BC/" class="archive-article-date">
-  	<time datetime="2021-07-26T09:22:33.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-07-26</time>
+        <a href="/2021/07/27/%E7%B1%BB%E4%BC%BC%E8%A7%86%E5%9B%BE%E7%9A%84%E5%AD%90%E6%9F%A5%E8%AF%A2/" class="archive-article-date">
+  	<time datetime="2021-07-27T02:05:52.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-07-27</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="MySQL判断字段是否空值？"><a href="#MySQL判断字段是否空值？" class="headerlink" title="MySQL判断字段是否空值？"></a>MySQL判断字段是否空值？</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SELECT * FROM cp_major where company_id = <span class="number">2</span> <span class="function">AND <span class="title">isnull</span><span class="params">(major_sort)</span>  order by major_sort asc</span></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SELECT * FROM cp_major where company_id = <span class="number">49</span> order by major_sort = NULL , major_sort asc;</span><br></pre></td></tr></table></figure>
+        <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Entity</span></span><br><span class="line"><span class="meta">@Table(name = &quot;staff_request_dto&quot;)</span></span><br><span class="line"><span class="meta">@Subselect(&quot;select \n&quot; +</span></span><br><span class="line"><span class="meta">        &quot;c.cName as staff_name,\n&quot; +</span></span><br><span class="line"><span class="meta">        &quot;d.cName as staff_name2,\n&quot; +</span></span><br><span class="line"><span class="meta">        &quot;b.cName as responsible_name,\n&quot; +</span></span><br><span class="line"><span class="meta">        &quot;a.* from staff_request a\n&quot; +</span></span><br><span class="line"><span class="meta">        &quot;LEFT JOIN staff b on a.responsible_id = b.id\n&quot; +</span></span><br><span class="line"><span class="meta">        &quot;LEFT JOIN staff c on a.staff_id = c.id\n&quot; +</span></span><br><span class="line"><span class="meta">        &quot;LEFT JOIN staff d on IFNULL(a.staff_id_2, &#x27;&#x27;) = d.id\n&quot;)</span></span><br><span class="line"><span class="meta">@Synchronize( &#123; &quot;staff&quot;, &quot;staff_request&quot;&#125;)</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//本来是dto</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">StaffRequestShowEntity</span> <span class="keyword">implements</span> <span class="title">Serializable</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Id</span></span><br><span class="line">    <span class="meta">@Column(name = &quot;id&quot;)</span></span><br><span class="line">    <span class="meta">@GeneratedValue(strategy = GenerationType.IDENTITY)</span></span><br><span class="line">    <span class="meta">@GenericGenerator(name = &quot;persistenceGenerator&quot;, strategy = &quot;increment&quot;)</span></span><br><span class="line">    <span class="keyword">private</span> Long id;</span><br><span class="line"></span><br><span class="line">。。。。</span><br></pre></td></tr></table></figure>
 
 
       
@@ -274,7 +272,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2021/07/26/MySQL%E5%88%A4%E6%96%AD%E5%AD%97%E6%AE%B5%E6%98%AF%E5%90%A6%E7%A9%BA%E5%80%BC/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2021/07/27/%E7%B1%BB%E4%BC%BC%E8%A7%86%E5%9B%BE%E7%9A%84%E5%AD%90%E6%9F%A5%E8%AF%A2/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -288,18 +286,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2021/07/27/SQl%E5%8E%9F%E7%94%9F%E5%88%86%E9%A1%B5%E6%9F%A5%E8%AF%A2-%E6%8E%92%E5%BA%8F-%E6%8E%92%E5%BA%8F%E5%AD%97%E6%AE%B5%E4%B8%BA%E7%A9%BA%E7%9A%84%E7%BD%AE%E5%90%8E/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          SQl原生分页查询+排序+排序字段为空的置后
-        
-      </div>
-    </a>
   
-  
-    <a href="/2021/07/26/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Hello World</div>
+    <a href="/2021/07/27/MySQL%E6%8E%92%E5%BA%8F%E4%BD%BFnull%E7%BB%93%E6%9E%9C%E6%8E%92%E5%88%B0%E6%9C%80%E5%90%8E/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">MySQL排序使null结果排到最后</div>
       <i class="icon-circle-right"></i>
     </a>
   
